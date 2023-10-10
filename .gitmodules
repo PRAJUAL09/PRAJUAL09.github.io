@@ -1,0 +1,4 @@
+[submodule "blogsite/public"]
+	path = blogsite/public
+	url = https://github.com/PRAJUAL09/PRAJUAL09.github.io.git
+	branch = main
