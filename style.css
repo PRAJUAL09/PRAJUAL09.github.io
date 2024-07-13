@@ -346,13 +346,14 @@ nav .fas{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/developer-4.jpg);
+        height: 100vh;
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
         font-size: 16px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 36px;
     }
     nav .fas{
         display: block;
