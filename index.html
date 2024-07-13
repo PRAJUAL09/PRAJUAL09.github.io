@@ -1,243 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/index.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <ul class="link-group">
-          <li class="link active"><a href="#">home</a></li>
-          <li class="link"><a href="#projects">projects</a></li>
-          <li class="link"><a href="#about">about</a></li>
-          <li class="link"><a href="#contact">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- home section -->
-    <section class="home-section active">
-      <h1 class="hero-heading">
-        hello, i am <br />
-        Prajual P V
-      </h1>
-      <img src="assets/images/img-01.jpg" class="home-img" alt="" />
-    </section>
-    <!-- project section -->
-    <section class="project-section active" id="projects">
-      <h1 class="project-heading">projects</h1>
-      <div class="project-container">
-        <div class="project-card">
-          <img src="assets/images/img-covid.jpg" class="project-img" alt="" />
-          <div class="project-content">
-            <h1 class="project-title">Covid Cases Near Me</h1>
-            <p class="project-info">
-              A Mini Project done using the concepts of DBMS. We have created a
-              web pages using HTML and CSS which serves the purpose of searching
-              the covid case patients and their details using the search
-              parameter as the Area Pincode.
-            </p>
-            <!-- <div class="project-btn-grp">
-              <button class="project-btn github">github repo</button>
-            </div> -->
-          </div>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Prajual P V</span></h1>
         </div>
-        <div class="project-card">
-          <img src="assets/images/img-atm.jpg" class="project-img" alt="" />
-          <div class="project-content">
-            <h1 class="project-title">
-              Detecting Abnormal Activities in ATM Centers
-            </h1>
-            <p class="project-info">
-              In this project we worked on improving the facial recognition of
-              the users that operates the ATMs and be able to detect their faces
-              even though their faces are partially or fully covered using
-              Artificial Intelligence (AI) and Machine Learning Models.
-            </p>
-            <!-- <div class="project-btn-grp">
-              <button class="project-btn github">github repo</button>
-            </div> -->
-          </div>
+    </div>
+</div>
+<!-- --------about--------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/developer.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br><br>
+                <p>Dynamic and result-driven Software Engineer with expertise in
+                    full-stack development and cloud computing. Experienced in building
+                    scalable web applications using Java, React.js, AWS. Hardworking,
+                    Highly motivated and Adept at collaborating with cross-functional
+                    teams to deliver high quality software solutions.</p><br><br><br>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>C, C++, Python, Java, SQL</li>
+                        <li><span>Web Development</span><br>HTML, CSS, Javascript, Tailwind CSS</li>
+                        <li><span>Frameworks & Libraries</span><br>Spring boot, Django, React.js, Node.js</li>
+                        <li><span>Cloud Computing</span><br>AWS Lambda,Cloudwatch, Cloud formation, DynamoDB, S3, ECS, EC2</li>
+                        <li><span>Developer Tools</span><br>Git, GitHub Actions, Docker, Terraform, VS Code, Intelli J</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Development Intern</span><br>Lets Grow More<br>2022</li>
+                        <li><span>Junior Software Developer</span><br>Moversly<br>2023 - present</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>10 th</span><br>Kendriya Vidyalaya Kanhangad<br>9 CGPA<br>2015 - 16</li>
+                        <li><span>12 th</span><br>Kendriya Vidyalaya Kanhangad<br>86.2 %<br>2017 - 18</li>
+                        <li><span>B.E</span><br>Computer Science & Engineering<br>Mangalore Institute of Technology & Engineering<br>7.62 CGPA<br>2018 - 22</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- about section -->
-    <section class="about-section active" id="about">
-      <h1 class="about-heading">about me</h1>
-      <div class="about">
-        <div class="about-img-container">
-          <img src="assets/images/img-04.jpg" class="about-img" alt="" />
-          <button class="download-cv-btn">downlaod cv</button>
+    </div>
+</div>
+
+<!---- Services--------------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Development</h2>
+                <p>Crafting responsive and user-friendly websites with the latest web technologies.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Backend Development</h2>
+                <p>Building robust and efficient server-side applications and APIs.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Cloud Computing</h2>
+                <p>Managing cloud architecture using AWS for scalable and secure solutions.</p>
+                <a href="#">Learn more</a>
+            </div>
+            
         </div>
-        <p class="about-info">
-          Dynamic and result-driven Software Engineer with expertise in
-          full-stack development and cloud computing. Experienced in building
-          scalable web applications using Java, React.js, AWS. Hardworking,
-          Highly motivated and Adept at collaborating with cross-functional
-          teams to deliver high quality software solutions.
-        </p>
-      </div>
-    </section>
-    <!-- skills -->
-    <section>
-      <div class="skill-section">
-        <h1 class="heading">skills</h1>
-        <div class="skills-container">
-          <div class="skill-card">
-            <img src="assets/images/html-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">HTML</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/css-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">CSS</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/js-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">JavaScript</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/react-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">React.js</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/node-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Node.js</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/c-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">C</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/cplus-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">C++</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/python-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Python</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/spring-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Java Spring Boot</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/sql-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">SQL</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/aws-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">AWS</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/git-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Git</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/terraform-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Terraform</h1>
-            <p class="skill-info"></p>
-          </div>
-          <div class="skill-card">
-            <img src="assets/images/docker-icon.png" class="skill-img" alt="" />
-            <!-- <div class="skill-level">98%</div> -->
-            <h1 class="skill-name">Docker</h1>
-            <p class="skill-info"></p>
-          </div>
+    </div>
+</div>
+
+<!-- portfolio   -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/img-covid.jpg" alt="">
+                <div class="layer">
+                    <h3>Covid Cases Near Me</h3>
+                    <p>A Mini Project done using the concepts of DBMS. We have created a
+                        web pages using HTML and CSS which serves the purpose of searching
+                        the covid case patients and their details using the search
+                        parameter as the Area Pincode.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/img-atm.jpg" alt="">
+                <div class="layer">
+                    <h3>Detecting Abnormal Activities in ATM Centers</h3>
+                    <p>In this project we worked on improving the facial recognition of
+                        the users that operates the ATMs and be able to detect their faces
+                        even though their faces are partially or fully covered using
+                        Artificial Intelligence (AI) and Machine Learning Models.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/to-do-app.jpg" alt="">
+                <div class="layer">
+                    <h3>To do App</h3>
+                    <p>Coming soon ...</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- timeline -->
-    <section>
-      <div class="timeline">
-        <h1 class="heading">education & experience</h1>
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title">2015 - 2016</h1>
-            <p class="card-detail">Kendriya Vidyalaya</p>
-            <p class="card-detail">Secondary School (SSLC)</p>
-            <p class="card-detail">9 CGPA</p>
-          </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+ </div>
+ <!-- contact -->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>prajualnandu@gmail.com</p>
+                <p>+91 9947319592</p>
+                <div class="social-icons">
+                    <a href="https://github.com/PRAJUAL09" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/prajual-pv-330b42129/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:prajualnandu@gmail.com"><i class="fab fa-envelope"></i></a>
+                </div>
+                <a href="assets/PRAJUAL_P_V_Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title">2017 - 2018</h1>
-            <p class="card-detail">Kendriya Vidyalaya</p>
-            <p class="card-detail">Senior Secondary (12 th)</p>
-            <p class="card-detail">86.2 %</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title">2018 - 2022</h1>
-            <p class="card-detail">Mangalore Institute of Technology & Engineering</p>
-            <p class="card-detail"> BE Computer Science & Engineering</p>
-            <p class="card-detail">7.62 CGPA</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h1 class="card-title">2023 - Current</h1>
-            <p class="card-detail">Moversly</p>
-            <p class="card-detail">Junior Software Developer</p>
-            <p class="card-detail">Singapore</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contact section -->
-    <section id="contact">
-      <div>
-        <h1 class="contact-heading">Contact Me</h1>
-        <div class="contact">
-          <p class="contact-info">
-            If you'd like to get in touch, feel free to reach out to me on any
-            of the platforms below.
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/PRAJUAL09" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/prajual-pv-330b42129/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="mailto:prajualnandu@gmail.com"
-              ><i class="fas fa-envelope"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+    </div>
+    <div class="copyright">
+        <p>Designed and Developed by Prajual P V</p>
+    </div>
+  </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwawQLTG_FpRiFw9j9SLDcOU9d7ZmCBmeA-vagJ7E62tWz83_xRcoBb4vxFmHv2C1e7/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully, Thank you !"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
 </html>
